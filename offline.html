@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>با مشکل مواجه شدید</title>
+    <link
+      rel="shortcut icon"
+      href="./assets/images/1.png?v=1"
+      type="image/x-icon"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+      }
+
+      body {
+        background: #0a0a0a;
+        color: #fff;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+      }
+
+      .container {
+        max-width: 600px;
+      }
+
+      .code {
+        font-size: 8rem;
+        font-weight: bold;
+        background: linear-gradient(45deg, #cc0000, #ff0000);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 10px;
+      }
+
+      .title {
+        font-size: 2rem;
+        color: #cc0000;
+        margin-bottom: 15px;
+      }
+
+      .desc {
+        color: #cccccc;
+        margin-bottom: 30px;
+        line-height: 1.6;
+      }
+
+      .btn {
+        display: inline-block;
+        background: #cc0000;
+        color: #ffffff;
+        padding: 12px 30px;
+        border-radius: 30px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: transform 0.3s, background 0.3s;
+        border: 1px solid #cc0000;
+      }
+
+      .btn:hover {
+        transform: translateY(-3px);
+        background: #ff0000;
+        border-color: #ff0000;
+      }
+
+      .gold-line {
+        height: 2px;
+        width: 100px;
+        background: #cc0000;
+        margin: 20px auto;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="code">407</div>
+      <div class="gold-line"></div>
+      <h1 class="title">اتصال قطع شد</h1>
+      <p class="desc">اتصال شما قطع شد لطفا اینترنت خود را برسی نمایید</p>
+      <a onclick="return location.reload();" class="btn"> رفرش </a>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const codeElement = document.querySelector(".code");
+        setInterval(() => {
+          codeElement.style.opacity =
+            codeElement.style.opacity === "0.8" ? "1" : "0.8";
+        }, 800);
+      });
+    </script>
+  </body>
+</html>
